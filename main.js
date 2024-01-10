@@ -47,7 +47,6 @@ chk.addEventListener('change', () => {
     document.body.classList.toggle('dark')
     const imagens = document.querySelectorAll('.image img')
     const linkes = document.querySelectorAll('.con img')
-    const flores = document.querySelectorAll('.flor img')
     imagens.forEach(img => {
         const nome = img.id
         if (document.body.classList.contains('dark')) {
@@ -60,17 +59,6 @@ chk.addEventListener('change', () => {
 
     })
     linkes.forEach(img => {
-        const nome = img.id
-        if (document.body.classList.contains('dark')) {
-            //modo escuro 
-            img.src = `./assets/${nome}_dark.png`
-        } else {
-            //modo claro
-            img.src = `./assets/${nome}.png`
-        }
-
-    })
-    flores.forEach(img => {
         const nome = img.id
         if (document.body.classList.contains('dark')) {
             //modo escuro 
