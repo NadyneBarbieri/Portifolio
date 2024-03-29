@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: var(--fonte)
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--fonte);
 }
 
 :root {
@@ -13,19 +13,62 @@
   --lua: url(./assets/lua.svg);
   --background: url(./assets/modo-claro.jpg);
   --fonte: #000000;
-  --card:rgba(0, 0, 0, 0); 
+  --card: rgba(0, 0, 0, 0);
 }
 
 .dark {
   --background: url(./assets/escuro.jpeg);
   --cor: #ffffff;
-  --fonte:#F7F9FB;
-  --card:rgba(0, 0, 0, 0.372);
+  --fonte: #f7f9fb;
+  --card: rgba(0, 0, 0, 0.372);
 }
+
+
+nav {
+  margin: 3px auto;
+  max-width: 750px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 15px var(--cor);
+  background-color: var(--card);
+  border-radius:10px;
+}
+
+nav ul li {
+  margin: 10px;
+  display: inline-block; /* Exibir itens da lista em linha */
+  
+}
+nav ul li a{
+  text-decoration: none;
+  color: var(--fonte);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.pesquisa{
+ 
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin: 20px auto;
+  padding: 5px 10px;
+  border: var(--cor) 2px solid;
+  border-radius: 15px;
+}
+
+#searchInput{
+  padding: 8px;
+  border: none;
+  outline: none;
+  background-color: var(--card);
+}
+
 
 body {
   align-items: center;
-  background: var(--background)no-repeat center/cover;
+  background: var(--background) no-repeat center/cover;
 }
 
 main {
@@ -54,7 +97,7 @@ main {
   align-items: center;
   padding: 0px;
   position: absolute;
-  height:20px;
+  height: 20px;
   width: 40px;
   margin: 35px 0 0 20px;
   transform: scale(1.5);
@@ -72,7 +115,7 @@ main {
   transition: transform 0.2s linear;
 }
 
-.checkbox:checked+.label .bola {
+.checkbox:checked + .label .bola {
   transform: translateX(24px);
 }
 
@@ -118,18 +161,18 @@ hr {
   margin-top: 10px;
   width: 300px;
   max-width: 25em;
-  color: var(--fonte)
+  color: var(--fonte);
 }
 
 header p {
   max-width: 300px;
   text-align: left;
   font-size: 20px;
-  color: var(--fonte)
+  color: var(--fonte);
 }
 
-button {
-  margin: 5px 0 0;
+#curriculo {
+  margin: 10px 0 0;
   outline: none;
   height: 40px;
   text-align: center;
@@ -137,7 +180,7 @@ button {
   border-radius: 10px;
   background-color: #ffffff00;
   border: 2px solid var(--fonte);
-  color:var(--cor);
+  color: var(--cor);
   letter-spacing: 1px;
   text-shadow: 0;
   font-size: 12px;
@@ -146,15 +189,15 @@ button {
   transition: all 0.25s ease;
 }
 
-button:hover {
+#curriculo:hover {
   background: #ffffff1b;
 }
 
-button:active {
+#curriculo:active {
   letter-spacing: 2px;
 }
 
-button:after {
+#curriculo:after {
   content: "Baixar Currículo";
 }
 
@@ -167,12 +210,10 @@ button:after {
   animation: rotating 2s 0.25s linear infinite;
 }
 
-
 .validate:after {
   font-family: "FontAwesome";
   content: "";
 }
-
 
 .imagens {
   position: relative;
@@ -233,10 +274,8 @@ h2 {
   font-size: 30px;
   margin-left: 55px;
   text-align: left;
-  color: var(--fonte)
+  color: var(--fonte);
 }
-
-
 
 /* Carrosel */
 .text-content {
@@ -288,14 +327,14 @@ section .card .image img {
   color: var(--fonte);
 }
 
-.image img{
+.image img {
   filter: brightness(9%);
   filter: saturate(1%);
-  filter: sepia(6%);	
-  filter: saturate(3%);	
+  filter: sepia(6%);
+  filter: saturate(3%);
   filter: grayscale(5%);
-  filter: contrast(20%);	
-  filter: brightness(.9);	
+  filter: contrast(20%);
+  filter: brightness(0.9);
 }
 .swiper-pagination-bullet {
   height: 5px;
@@ -326,7 +365,6 @@ section .card .image img {
   padding: 10px;
 }
 
-
 @media (max-width: 768px) {
   main {
     table-layout: auto;
@@ -351,7 +389,7 @@ section .card .image img {
     height: 12rem;
     margin-left: auto;
   }
-  
+
   .flor {
     position: absolute;
     right: 1rem;
@@ -361,7 +399,7 @@ section .card .image img {
     max-width: 16rem;
     max-height: 15rem;
   }
-  
+
   .foto {
     z-index: 1;
     position: absolute;
@@ -371,101 +409,102 @@ section .card .image img {
     width: 88%;
   }
 
-.label {
-  background-color: #111; 
-  border: 2px solid black;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  position: absolute;
-  height: 8px;
-  width:30px;
-  margin: 15px -15px;
-  transform: scale(1.5);
+  .label {
+    background-color: #111;
+    border: 2px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    margin: 15px -15px;
+    transform: scale(1.5);
+  }
+
+  .label .bola {
+    border: solid black 2px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    /* pra posicionar o botao melhor aqui */
+    width: 20px;
+    height: 20px;
+    left: -2px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+
+
+  ul li a img {
+    margin: 5px -15px;
+    width: 37px;
+  }
+  header {
+    width: 100%;
+    max-height: 31rem;
+  }
+
+  .texto {
+    margin: 2px 10px 30px 55px;
+  }
+
+  h1 {
+    text-align: left;
+    color: var(--fonte);
+    font-size: 35px;
+  }
+
+  hr {
+    margin-top: 10px;
+    width: 300px;
+    max-width: 15em;
+    color: var(--fonte);
+  }
+
+  header p {
+    display: contents;
+    max-width: 30px;
+    text-align: left;
+    font-size: 20px;
+    color: var(--fonte);
+  }
+
+  h2 {
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin-left: 20px;
+    text-align: left;
+    color: var(--fonte);
+  }
+  .titulo hr {
+    margin: 18px;
+    width: 100px;
+    height: 1px;
+    border: var(--fonte);
+    background-color: var(--fonte);
+    align-items: center;
+  }
+  .swiper {
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .card {
+    align-items: center;
+    position: relative;
+    min-width: 250px;
+    border-radius: 20px;
+    margin: 20px 0;
+  }
 }
 
-.label .bola {
-  border: solid black 2px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  /* pra posicionar o botao melhor aqui */
-  width: 20px;
-  height: 20px;
-  left: -2px;
-  transform: translateX(0px);
-  transition: transform 0.2s linear;
+footer {
+  margin: 10px;
+  text-align: center;
 }
-
-ul li {
-  margin-top: 3rem;
-  list-style: none;
-}
-
-ul li a img {
-  margin: 5px -15px;
-  width: 37px;
-}
-header {
-  width: 100%;
-  max-height: 31rem;
-}
-
-.texto {
-  margin: 2px 0 0 100px;
-}
-
-h1 {
-  text-align: left;
-  color: var(--fonte);
-  font-size: 35px;
-}
-
-hr {
-  margin-top: 10px;
-  width: 300px;
-  max-width: 15em;
-  color: var(--fonte)
-}
-
-header p {
-  display: contents;
-  max-width: 30px;
-  text-align: left;
-  font-size: 20px;
-  color: var(--fonte)
-}
-
-h2 {
-  flex-wrap: wrap;
-  font-size: 30px;
-  margin-left: 20px;
-  text-align: left;
-  color: var(--fonte)
-}
-.titulo hr {
-  margin: 18px;
-  width: 100px;
-  height: 1px;
-  border: var(--fonte);
-  background-color: var(--fonte);
-  align-items: center;
-}
-.swiper {
-  width: 250px;
-  padding: 10px;
-  display: flex;
-  align-items: flex-end;
-}
-
-.card {
-  align-items: center;
-  position: relative;
-  min-width: 250px;
-  border-radius: 20px;
-  margin: 20px 0;
-}
-} 

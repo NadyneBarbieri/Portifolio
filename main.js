@@ -13,9 +13,9 @@ document.querySelector("#front").innerHTML =
 
 document.querySelector("#software").innerHTML =
     Card("VSCode", "janeiro de", "2022", ) +
-    Card("SpringBoot", "janeiro de", "2022") +
-    Card("MySQL", "janeiro de", "2022") +
-    Card("NodeJS", "janeiro de", "2022") +
+   // Card("SpringBoot", "janeiro de", "2022") +
+  //  Card("MySQL", "janeiro de", "2022") +
+  //  Card("NodeJS", "janeiro de", "2022") +
     Card("Arduino", "janeiro de", "2023") +
     Card("Postman", "janeiro de", "2022") +
     Card("Figma", "setembro de", "2022")

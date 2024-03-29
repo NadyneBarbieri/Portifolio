@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <title>Portifólio</title>
 
     <!-- ===== Link Swiper's CSS ===== -->
@@ -12,7 +13,18 @@
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="./style.css">
 </head>
-
+    <nav>
+        <ul class="lista">
+            <li><a href="#">Pagina de inicio</a></li>
+            <li><a href="#">Portifolio</a></li>
+            <li><a href="#">Sobre mim</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <div class="pesquisa">
+            <label for="searchInput"><i class="fas fa-search"></i></label>
+            <input id="searchInput" type="text" placeholder="Pesquisar">
+        </div>
+    </nav>
 <body id="image">
     <main>
         <div class="complexo">
@@ -34,7 +46,7 @@
                 <h1>Nadyne Barbieri</h1>
                 <p>Engenheira mecatrônica, full-stack em </p>
                 <p>processamento...</p>
-                <button id="button" onclick="handleDownload()"></button>
+                <button id="curriculo" onclick="handleDownload()"></button>
                 <script>
                     const curriculo = "./doc/NadyneBarbieri.pdf";
                     const handleDownload = () => {
@@ -238,6 +250,11 @@
             swiper4.update()
         });
     </script>
+    <footer>
+        <div>
+            <p>© 202 Nadyne Barbieri. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
